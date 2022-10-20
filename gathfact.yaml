@@ -19,3 +19,14 @@
        name: httpd
        state: started
     when: ansible_os_family=="Redhat"
+  
+  - name: open port 80 for httpd access
+    firewalld:
+       service: http
+       permanent: true
+       state: enabled
+
+  - name: restart the firewalld service to load in the firewall changes
+    service:
+        name: firewalld
+        state: restarted
