@@ -13,22 +13,3 @@
       name: httpd
       state: present
     when: ansible_os_family== "Redhat"
-
-  - name: I want to start the httpd service
-    service:
-       name: httpd
-       state: started
-    when: ansible_os_family=="Redhat"
-  
-  - name: open port 80 for httpd access
-    firewalld:
-       service: http
-       permanent: true
-       state: enabled
-    when: ansible_os_family=="Redhat"
-
-  - name: restart the firewalld service to load in the firewall changes
-    service:
-        name: firewalld
-        state: restarted
-    when: ansible_os_family=="Redhat"
