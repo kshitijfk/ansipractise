@@ -25,8 +25,10 @@
        service: http
        permanent: true
        state: enabled
+    when: ansible_os_family=="Redhat"
 
   - name: restart the firewalld service to load in the firewall changes
     service:
         name: firewalld
         state: restarted
+    when: ansible_os_family=="Redhat"
