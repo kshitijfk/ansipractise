@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  -  name: I want to install apache2
+     apt:
+       name: ubuntuwebserver
+       state: present
+     when: ansible_os_family=="Debian"
+
+  -  name: I want to install httpd
+     yum:
+       name: redhatwebserver
+       state: present
+     when: ansible_os_family=="Redhat"
