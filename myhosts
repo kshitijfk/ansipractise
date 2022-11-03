@@ -3,5 +3,5 @@
 172.31.22.121
 
 [mywebserver:vars]
-ubuntuwebserver=apache2
+ubuntuwebserver=apache2222
 redhatwebserver=httpd
