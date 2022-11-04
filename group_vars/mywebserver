@@ -2,3 +2,5 @@
 
 ubuntuwebserver: apache2
 redhatwebserver: httpd
+ubuntujavapack: openjdk-8-jdk
+redhatjavapack: java-1.8.0-openjdk
