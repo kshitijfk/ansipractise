@@ -9,3 +9,15 @@
   - name: I want to print the output
     debug: 
         msg: "{{taskresult}}"
+
+  - name: Want to install git
+    apt:
+      name: git
+      state: present
+    when: taskresult.stderr !=""
+  
+  - name: want to install tree
+    apt:
+      name: tress
+      state: present
+    when: taskresult.stderr ==""
