@@ -18,6 +18,6 @@
   
   - name: want to install tree
     apt:
-      name: tress
+      name: tree
       state: present
     when: taskresult.stderr ==""
