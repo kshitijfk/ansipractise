@@ -7,4 +7,5 @@
     register: taskresult
 
   - name: I want to print the output
-    debug: "{{taskresult}}"
+    debug: 
+        msg: "{{taskresult}}"
