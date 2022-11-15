@@ -6,3 +6,7 @@
     copy:
       src: mystaticfile
       dest: /home/ubuntu/mystaticfile
+  - name: changing dynamic file
+    template: 
+          src: myindex.j2
+          dest: /var/www/html/index.html
