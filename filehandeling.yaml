@@ -3,6 +3,7 @@
   become: yes
   tasks:
   - include_tasks: myfile.yaml
+    ignore_error: yes
   
   - name: copying static files into nodes
     copy:
