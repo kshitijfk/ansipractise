@@ -1,0 +1,7 @@
+---
+- name: creating tomcat user
+  user:
+    name: tomcat
+    shell: /bin/bash
+    home: /opt/tomcat
+    state: present  

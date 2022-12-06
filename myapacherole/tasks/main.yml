@@ -1,2 +1,17 @@
 ---
 # tasks file for myapacherole
+# Step-1  --> Installing tomcat
+
+- include_tasks: adduser.yml
+- include_tasks: installjava.yml
+- include_tasks: download.yml
+- include_tasks: permission.yml
+
+
+# Step-2  --> configuring admin users
+- include_tasks: configadminuser.yml
+
+# Step-3
+- include_tasks: tomservice.yml
+- include_tasks: tomstart.yml
+
