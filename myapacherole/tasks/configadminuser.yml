@@ -12,3 +12,4 @@
 - name: add host manager context file
   template:
          src: template/mytomcathostcontext.j2
+         dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
